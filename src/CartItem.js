@@ -1,7 +1,7 @@
 import React from 'react'
 
 class CartItem extends React.Component {
-    constructor() {
+    /* constructor() {
         super()
         this.state = {
             price: 9999,
@@ -11,24 +11,27 @@ class CartItem extends React.Component {
         }
         //this.increaseQuantity= this.increaseQuantity.bind(this);
     }
+ */
 
+        
 
     increaseQuantity = () => {
-        console.log("test");
+
     }
 
-    decreaseQuantity() {
+    decreaseQuantity = () => {
         console.log("decrease");
     }
-    deleteQuantity() {
+    deleteQuantity = () => {
         console.log("delete");
     }
 
 
     render() {
-        const { price, title, qty } = this.state
+        const { price, title, qty } = this.props.product;
         return (
             <div className="cart-item">
+                {/* {this.props.jsx} */}
                 <div className="left-block">
                     <img src="" alt="" style={styles.image} />
                 </div>
@@ -68,8 +71,8 @@ class CartItem extends React.Component {
 
 const styles = {
     image: {
-        height: 110,
-        width: 110,
+        height: 130,
+        width: 130,
         borderRadius: 4,
         background: '#ccc',
     },
