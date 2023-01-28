@@ -1,8 +1,7 @@
 import React from 'react'
 // import CartItem from './CartItem'
-import Cart from './Cart'
-import Navbar from './Navbar'
-
+import Cart from './Cart1'
+import Navbar from './Navbar1'
 class App extends React.Component {
   constructor() {
     super()
@@ -83,9 +82,9 @@ class App extends React.Component {
   products.map((product) => 
   {
     cartTotal =cartTotal  + product.qty * product.price 
+    return cartTotal;
 
   })
-  return cartTotal;
   }
 
   render() {
